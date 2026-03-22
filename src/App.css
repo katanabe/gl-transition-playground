@@ -1,0 +1,149 @@
+.app header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--bg);
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.app main.grid {
+  margin-top: 120px;
+}
+
+.app h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.image-selectors {
+  display: flex;
+  gap: 12px;
+}
+
+.header-controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.header-controls select {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+.header-controls label input[type='range'] {
+  width: 120px;
+  accent-color: var(--accent);
+}
+
+.header-controls label span {
+  min-width: 52px;
+  font-variant-numeric: tabular-nums;
+}
+
+.category-filters {
+  display: flex;
+  gap: 6px;
+}
+
+.category-filters button {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.category-filters button:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.category-filters button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 20px;
+}
+
+.preview {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.preview-canvas {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: block;
+}
+
+.preview-controls {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.preview-controls h3 {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.preview-category {
+  font-size: 11px;
+  color: var(--text-dim);
+  background: var(--bg);
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.preview-controls input[type='range'] {
+  flex: 1;
+  accent-color: var(--accent);
+}
+
+.preview-controls button {
+  padding: 4px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--accent);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.preview-controls button:hover {
+  background: var(--accent);
+  color: white;
+}
